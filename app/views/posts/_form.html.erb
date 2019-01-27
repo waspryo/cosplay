@@ -1,0 +1,13 @@
+<table class="attr">
+  <tr>
+    <th><%= form.label :new_post_picture %>
+    <td><%= form.file_field :new_post_picture %>
+  </tr>
+  <tr>
+    <th><%= form.label :name %></th>
+    <td><%= form.text_field :name, size: 20 %></td>
+  </tr>
+  <tr>
+    <th><%= form.label :explain %></th>
+    <td><%= form.text_area :explain, rows: 10, cols: 45 %></td>
+  </tr>

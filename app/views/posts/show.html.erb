@@ -1,2 +1,18 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1>作品紹介</h1>
+
+<h5>画像<h5>
+  <% if @posts.post_picture.attached? %>
+   <%= image_tag @posts.post_picture, :size =>'320x320' %>
+  <% end %>
+
+<div class = "content">
+  <h5>タイトル</h5>
+  <p class="content_text"></p>
+    <%= @posts.name %>
+</div>
+
+<div class = "content">
+  <h5>タイトル</h5>
+  <p class="content_text"></p>
+    <%= @posts.explain %>
+</div>

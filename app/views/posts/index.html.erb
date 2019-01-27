@@ -1,2 +1,27 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div class="flexbox">
+  <% if @post.present? %>
+    <% @post.each do |posts| %>
+      <div class="card">
+        <div class="card-image">
+          <% if posts.post_picture.attached? %>
+           <%= image_tag posts.post_picture %>
+          <% end %>
+        </div>
+        <div class="card-title">
+          <h2><%= posts.name %></h2>
+        </div>
+        <div class="card-title">
+          <h2><%= posts.explain %></h2>
+        </div>
+        <div class="card-more">
+          <%=link_to "詳細", posts %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <p>記事がありません</p>
+  <% end %>
+</div>
+
+<a href="/">TOP<a>
+
