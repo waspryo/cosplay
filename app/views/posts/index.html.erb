@@ -1,40 +1,40 @@
-# <div class="flexbox">
-#   <% if @post.present? %>
-#   <% @post.each do |posts| %>
-#   <div class="card">
-#     <div class="card-image">
-#       <% if posts.post_picture.attached? %>
-#       <%= image_tag posts.post_picture %>
-#       <% end %>
-#     </div>
-#     <div class="card-title">
-#       <h2>
-#         <%= posts.name %>
-#       </h2>
-#     </div>
-#     <div class="card-title">
-#       <h2>
-#         <%= posts.explain %>
-#       </h2>
-#     </div>
-#     <div class="card-more">
-#       <%=link_to "詳細", posts %>
-#     </div>
-#   </div>
-#   <% end %>
-#   <% else %>
-#   <p>記事がありません</p>
-#   <% end %>
-# </div>
+ <!-- <div class="flexbox">
+   <% if @post.present? %>
+   <% @post.each do |posts| %>
+   <div class="card">
+     <div class="card-image">
+       <% if posts.post_picture.attached? %>
+       <%= image_tag posts.post_picture %>
+       <% end %>
+     </div>
+     <div class="card-title">
+       <h2>
+         <%= posts.name %>
+       </h2>
+     </div>
+     <div class="card-title">
+       <h2>
+         <%= posts.explain %>
+       </h2>
+     </div>
+     <div class="card-more">
+       <%=link_to "詳細", posts %>
+     </div>
+   </div>
+   <% end %>
+   <% else %>
+   <p>記事がありません</p>
+   <% end %>
+ </div> -->
 
 
 
 <div class="section no-pad-bot" id="index-banner">
   <div class="container">
     <% if @post.present? %>
-    <% @post.each do |posts| %>
     <h2>テーマ名</h2>
     <ul class="card-list">
+      <% @post.each do |posts| %>
       <li>
         <div class="col s12 m7">
           <div class="card">
@@ -44,19 +44,20 @@
               <% end %>
             </div>
             <div class="card-action">
-              # <%=link_to "詳細", posts %>
-              # <a href="#">more</a>
+              <!-- # <%=link_to "詳細", posts %>
+              # <a href="#">more</a> -->
               <span class="card-title grey-text text-darken-4"><%= posts.name %></span>
             </div>
           </div>
         </div>
       </li>
+      <% end %>
+
     </ul>
-    <% end %>
     <% else %>
     <p>記事がありません</p>
     <% end %>
   </div>
 </div>
 
-# <a href="/">TOP<a>
+<!-- # <a href="/">TOP<a> -->
