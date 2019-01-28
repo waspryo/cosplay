@@ -1,13 +1,23 @@
-<table class="attr">
-  <tr>
-    <th><%= form.label :new_post_picture %>
-    <td><%= form.file_field :new_post_picture %>
-  </tr>
-  <tr>
-    <th><%= form.label :name %></th>
-    <td><%= form.text_field :name, size: 20 %></td>
-  </tr>
-  <tr>
-    <th><%= form.label :explain %></th>
-    <td><%= form.text_area :explain, rows: 10, cols: 45 %></td>
-  </tr>
+<div class="name">
+  <div class="form-group">
+    <%= form.text_field :name, autofocus: true, placeholder: "名前", class: "form-control"%>
+  </div>  
+</div>
+
+<div class="introduce">
+  <div class="form-group">
+    <%= form.text_field :explain, autofocus: true, placeholder: "紹介", class: "form-control"%>
+  </div>  
+</div>
+
+<div class="pic">
+  <div class="form-group">
+    <%= form.file_field :new_post_picture, class: "btn btn-info btn-lg btn-block" %>
+  </div>  
+</div>
+
+
+
+<div class="actions">
+  <%= form.submit %>
+</div>
