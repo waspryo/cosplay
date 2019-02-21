@@ -1,24 +1,16 @@
-# README
+# コスプレの再現度をユーザーが評価するサービス
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+経緯
+--
 
-Things you may want to cover:
+ハッカソンに参加し共同開発するにあたりWatsonAPIを実装してユーザー参加型のアプリを作ろうと始めたのがきっかけでした。
 
-* Ruby version
+## 使用した言語
 
-* System dependencies
+Ruby on Rails
 
-* Configuration
+## 実装した機能
 
-* Database creation
+・Deviceによるログイン機能
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+・CarrierWaveを使い画像アップロード機能の実装
